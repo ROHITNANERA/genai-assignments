@@ -18,3 +18,8 @@ Ensure to run locally from this directly so the file creation scope exists withi
 ```bash
 python task-1.py
 ```
+
+## Reflection
+* **What I learned:** I learned how to use Python's `open()` function with different modes like read (`r`), write (`w`), and append (`a`). Using the `with` statement was also a new concept that helps manage files safely so I don't forget to close them.
+* **What was challenging:** Understanding the differences between `.read()`, `.readline()`, and `.readlines()` took some experimenting. Also, making sure I convert the text read from a file into integers before doing math on it was a common mistake I had to fix. Getting comfortable with basic loops instead of advanced list comprehensions helped me understand string parsing better. 
+* **What I'd do differently:** In the future, I will start with simple code that solves the problem directly before trying to format things perfectly or using advanced checks like `try-except` blocks preemptively. Sticking to the basic tools I've practiced more recently builds a stronger foundation!
