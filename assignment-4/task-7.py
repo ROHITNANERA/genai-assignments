@@ -21,12 +21,10 @@ def main():
     filename = "discount_report.txt"
 
     # Ask user for discount percentage
-    try:
-        discount_input = input("Enter discount percentage (e.g. 10 for 10%): ").strip()
-        discount_percent = float(discount_input)
-    except ValueError:
-        print("Invalid number. Using 0% discount by default.")
-        discount_percent = 0.0
+    # Ask user for discount percentage
+    # I am assuming the user enters a valid number, keeping it simple as I learned recently
+    discount_input = input("Enter discount percentage (e.g. 10 for 10%): ")
+    discount_percent = float(discount_input)
 
     total_discounted_sum = 0
     item_count = len(prices)
@@ -41,8 +39,8 @@ def main():
             discounted_price = original_price - (original_price * discount_percent / 100)
             total_discounted_sum += discounted_price
             
-            # Format and save entry
-            file.write(f"{product:<10} | {original_price:<14} | {discounted_price:.2f}\n")
+            # Writing using simple f-strings without advanced formatting
+            file.write(f"{product} | {original_price} | {discounted_price}\n")
         
         # Write summary
         file.write("-" * 45 + "\n")

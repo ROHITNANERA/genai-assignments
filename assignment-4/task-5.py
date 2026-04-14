@@ -25,11 +25,12 @@ def main():
     print("--- Products in File ---")
     with open(filename, 'r') as file:
         for line in file:
-            parts = line.strip().split('|')
-            if len(parts) == 2:
-                print(f"Item: {parts[0].strip():<15} Cost: ${parts[1].strip()}")
-            else:
-                print(line.strip())
+            # I split the line into name and price by using the | as a separator
+            # This is simpler and follows what I have learned so far
+            parts = line.split('|')
+            name = parts[0].strip()
+            price = parts[1].strip()
+            print("Item:", name, "Cost: $" + price)
 
 if __name__ == "__main__":
     main()

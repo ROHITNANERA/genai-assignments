@@ -11,7 +11,13 @@ def main():
     
     with open(filename, 'r') as file:
         lines = file.readlines()
-        sales = [int(line.strip()) for line in lines if line.strip().isdigit()]
+        
+        # Creating an empty list to store the integers
+        sales = []
+        for line in lines:
+            # I learned to use int() to convert text to numbers
+            number = int(line.strip())
+            sales.append(number)
 
     if not sales:
         print("No sales data available.")

@@ -21,8 +21,15 @@ def main():
     print("\n--- 3. Using .readlines() to list of ints ---")
     with open(filename, 'r') as file:
         lines = file.readlines()
-        # Cleanup newlines and convert to int
-        sales_integers = [int(line.strip()) for line in lines if line.strip().isdigit()]
+        
+        # I am using a simple for-loop to convert each line to a number
+        # I learned this loop pattern in the previous control flow assignment
+        sales_integers = []
+        for line in lines:
+            line = line.strip()
+            # converting the text to integer without complex checks
+            sales_integers.append(int(line))
+            
         print(f"List of integers: {sales_integers}")
 
 if __name__ == "__main__":

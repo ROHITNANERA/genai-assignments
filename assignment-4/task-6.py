@@ -11,8 +11,9 @@ import os
 def main():
     filename = input("Enter the filename you want to open: ").strip()
 
-    # Safely check if file exists using os module
-    if os.path.exists(filename) and os.path.isfile(filename):
+    # Checking if file exists so the program doesn't crash
+    # Using only os.path.exists() as requested in the task instruction
+    if os.path.exists(filename):
         print(f"\n--- Contents of {filename} ---")
         with open(filename, 'r') as file:
             print(file.read())
